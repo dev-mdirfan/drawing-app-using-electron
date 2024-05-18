@@ -1,0 +1,37 @@
+{
+  "name": "draw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . DrawingApp --platform=win32 --arch=x64 --out=dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^30.0.6",
+    "electron-builder": "^24.13.3",
+    "electron-packager": "^17.1.2"
+  },
+  "build": {
+    "appId": "com.example.myapp",
+    "productName": "MyApp",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "sign": false
+    },
+    "mac": {
+      "target": "dmg",
+      "sign": false
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
